@@ -16,7 +16,7 @@ set PATH $PATH /usr/local/cuda-10.0/bin
 #source /usr/local/bin/virtualenvwrapper.sh
 
 
-. /home/sbyoussouf/miniconda3/etc/fish/conf.d/conda.fish
+. ~/miniconda3/etc/fish/conf.d/conda.fish
 
 fish_vi_key_bindings
 
@@ -30,5 +30,5 @@ set MANPATH $MANPATH /usr/local/k1tools/share/man/
 set LD_LIBRARY_PATH $LD_LIBRARY_PATH /usr/local/k1tools/lib64/
 set LD_LIBRARY_PATH $LD_LIBRARY_PATH /usr/local/k1tools/lib
 
-if test -f /home/sbyoussouf/.autojump/share/autojump/autojump.fish; . /home/sbyoussouf/.autojump/share/autojump/autojump.fish; end
-set PATH /home/sbyoussouf/.autojump/bin /home/sbyoussouf/miniconda3/condabin /home/sbyoussouf/.autojump/bin /home/sbyoussouf/.fzf/bin /home/sbyoussouf/bin /home/sbyoussouf/.local/bin /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/games /usr/local/games /snap/bin /usr/lib/jvm/java-8-oracle/bin /usr/lib/jvm/java-8-oracle/db/bin /usr/lib/jvm/java-8-oracle/jre/bin /home/sbyoussouf/devenv/node/bin /usr/local/cuda-10.0/bin /usr/local/k1tools/bin /home/sbyoussouf/N2D2/build/bin 
+if test -f ~/.autojump/share/autojump/autojump.fish; . ~/.autojump/share/autojump/autojump.fish; end
+set PATH ~/.autojump/bin ~/miniconda3/condabin ~/.autojump/bin ~/.fzf/bin ~/bin ~/.local/bin /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/games /usr/local/games /snap/bin /usr/lib/jvm/java-8-oracle/bin /usr/lib/jvm/java-8-oracle/db/bin /usr/lib/jvm/java-8-oracle/jre/bin ~/devenv/node/bin /usr/local/cuda-10.0/bin /usr/local/k1tools/bin ~/N2D2/build/bin 
