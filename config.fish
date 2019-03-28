@@ -24,6 +24,8 @@ alias sshnx='ssh -X nvidia@10.8.32.17'
 alias sshyx='ssh -X ys254960@10.8.32.17'
 bass source ~/.bashrc
 
+bind -M insert \cf accept-autosuggestion
+
 
 set PATH $PATH /usr/local/k1tools/bin 
 set MANPATH $MANPATH /usr/local/k1tools/share/man/ 
