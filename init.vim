@@ -209,23 +209,6 @@ set matchtime=1 " ... during this time ms
 " open nerdtree at startup
 nnoremap <c-f> :silent !clang-format -i -style=file %<cr>:edit!<cr>
 
-" arduino config
-let g:vim_arduino_ino_cmd = 'ano'
-let g:vim_arduino_ino_model = 'mega' 
-let g:vim_arduino_ino_cpu = 'atmega2560' 
-
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-" let g:syntastic_cpp_include_dirs = [ '../include', 'include', '/local/tv249146/BAPTISTE_WORKSPACE/include/', '/local/tv249146/BAPTISTE_WORKSPACE/developpement/toolboxes/toolboxes/include/', '/local/tv249146/BAPTISTE_WORKSPACE/developpement/toolboxes/toolboxes/include/', '/local/tv249146/BAPTISTE_WORKSPACE/developpement/common_includes/common_includes/include/', '/local/tv249146/BAPTISTE_WORKSPACE/developpement/common_includes/common_includes/include/', '/local/tv249146/BAPTISTE_WORKSPACE/developpement/sensors/sensors/include/', '/local/tv249146/BAPTISTE_WORKSPACE/developpement/image_processing/image_processing/include/', '/local/tv249146/BAPTISTE_WORKSPACE/developpement/data/data/include/', '/local/tv249146/BAPTISTE_WORKSPACE/developpement/things2do/RoadSignsDetection/phase1_core/include/', '/local/tv249146/BAPTISTE_WORKSPACE/developpement/image_processing_standalone/include/'] 
-" " let g:syntastic_cpp_compiler = 'g++'
-" let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++
-"
 nnoremap <C-b> :make -C ../build<cr>
 
 " Redo prototypes in cpp
