@@ -7,3 +7,5 @@ A collection of my config files
 * ~/.config/i3-regolith/config
 * /usr/share/i3blocks/weather
 * /etc/i3blocks.conf
+* ~/.config/kitty/kitty.conf
+* /etc/xdg/compton.conf

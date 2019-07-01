@@ -56,7 +56,7 @@ floating_modifier $mod
 hide_edge_borders smart
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec kitty
 
 # start a web browser
 bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
@@ -177,7 +177,7 @@ bindsym $mod+Shift+e exit
 
 # lock the screen
 # bindsym $mod+Escape exec gnome-screensaver-command --lock
-bindsym $mod+Escape exec i3lock-fancy-rapid 5 3
+bindsym $mod+Escape exec i3lock-fancy-rapid 6 2
 
 # put the system to sleep
 bindsym $mod+Shift+s exec systemctl suspend
@@ -251,7 +251,7 @@ bar {
 # Run other programs with i3
 
 # Composite manager
-exec --no-startup-id compton -f --config /etc/xdg/compton.conf
+exec_always --no-startup-id compton -f --config /etc/xdg/compton.conf
 
 # Lanuch the shortcut Conky window on first login
 exec --no-startup-id /usr/bin/regolith-ftue.sh
