@@ -1,7 +1,7 @@
 # i3 config file (v4) for Regolith Desktop Environment
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-
+#
 # This defines which key super maps to on your keyboard.  
 # Alt key is Mod1, and Windows key is Mod4
 set $mod Mod4
@@ -57,6 +57,9 @@ hide_edge_borders smart
 
 # start a terminal
 bindsym $mod+Return exec kitty
+
+# start a file manager
+bindsym $mod+Mod1+Return exec nautilus ~/ 
 
 # start a web browser
 bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
