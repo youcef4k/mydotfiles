@@ -108,7 +108,7 @@ let g:deoplete#enable_at_startup = 1
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " Tagbar Toggle
-nnoremap <F3> :TagbarToggle<CR>
+nnoremap <F8> :TagbarToggle<CR>
 
 " NerdTree
 nnoremap <F6> :NERDTreeTabsToggle<cr>
@@ -136,12 +136,17 @@ set splitbelow
 map <Leader> <Plug>(easymotion-prefix)
 
 " LLDB
-map <F9> <Plug>LLBreakSwitch  
-map <F3> :LL s<CR>
-map <F4> :LL n<CR>
-map <F2> :LL continue<CR> 
-map <F10> :LLmode code<CR>
-map <F12> :LLmode debug<CR>
+map <leader><F2> :LLsession new<CR>
+map <leader><F3> :LLsession load<CR>
+nmap <leader><F4> <Plug>LLBreakSwitch  
+map <leader><F5> :LLrefresh<CR>
+vmap <leader><F6> <Plug>LLStdInSelected
+map <leader><F7> :LLmode code<CR>
+map <leader><F8> :LLmode debug<CR>
+map <leader><F9> :LL process kill<CR> 
+map <leader><F10> :LL process interrupt<CR> 
+map <leader><F11> :LL process launch<CR> 
+map <leader><F12> :LL continue<CR> 
 
 " CTAGS GENERATOR
 map <leader><leader>c :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
@@ -194,14 +199,3 @@ let g:fzf_action = {
       \ 'ctrl-s': 'split',
       \ 'ctrl-v': 'vspli'
       \ }
-
-""LLDB
-nmap <A-b> <Plug>LLBreakSwitch
-vmap <F2> <Plug>LLStdInSelected
-nnoremap <F4> :LLstdin<CR>
-nnoremap <F5> :LLmode debug<CR>
-nnoremap <S-F5> :LLmode code<CR>
-nnoremap <F8> :LL continue<CR>
-nnoremap <S-F8> :LL process interrupt<CR>
-nnoremap <F9> :LL print <C-R>=expand('<cword>')<CR>
-vnoremap <F9> :<C-U>LL print <C-R>=lldb#util#get_selection()<CR><CR>
