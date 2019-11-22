@@ -9,3 +9,4 @@ A collection of my config files
 * /etc/i3blocks.conf
 * ~/.config/kitty/kitty.conf
 * /etc/xdg/compton.conf
+* /usr/share/games/fortunes/sfw-programming (+sudo strfile <file>)
