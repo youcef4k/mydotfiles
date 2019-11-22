@@ -143,10 +143,9 @@ map <leader><F5> :LLrefresh<CR>
 vmap <leader><F6> <Plug>LLStdInSelected
 map <leader><F7> :LLmode code<CR>
 map <leader><F8> :LLmode debug<CR>
-map <leader><F9> :LL process kill<CR> 
-map <leader><F10> :LL process interrupt<CR> 
-map <leader><F11> :LL process launch<CR> 
-map <leader><F12> :LL continue<CR> 
+map <F3> :LL process kill<CR> 
+map <F4> :LL process launch<CR> 
+map <leader><F9> :LL continue<CR> 
 
 " CTAGS GENERATOR
 map <leader><leader>c :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
