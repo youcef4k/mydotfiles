@@ -15,6 +15,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug '~/.fzf'
+Plug 'dbgx/lldb.nvim'
 Plug 'junegunn/fzf.vim'
 Plug 'racer-rust/vim-racer'
 Plug 'jceb/vim-orgmode'
@@ -107,7 +108,7 @@ let g:deoplete#enable_at_startup = 1
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " Tagbar Toggle
-nnoremap <F8> :TagbarToggle<CR>
+nnoremap <F3> :TagbarToggle<CR>
 
 " NerdTree
 nnoremap <F6> :NERDTreeTabsToggle<cr>
@@ -193,3 +194,14 @@ let g:fzf_action = {
       \ 'ctrl-s': 'split',
       \ 'ctrl-v': 'vspli'
       \ }
+
+""LLDB
+nmap <A-b> <Plug>LLBreakSwitch
+vmap <F2> <Plug>LLStdInSelected
+nnoremap <F4> :LLstdin<CR>
+nnoremap <F5> :LLmode debug<CR>
+nnoremap <S-F5> :LLmode code<CR>
+nnoremap <F8> :LL continue<CR>
+nnoremap <S-F8> :LL process interrupt<CR>
+nnoremap <F9> :LL print <C-R>=expand('<cword>')<CR>
+vnoremap <F9> :<C-U>LL print <C-R>=lldb#util#get_selection()<CR><CR>
