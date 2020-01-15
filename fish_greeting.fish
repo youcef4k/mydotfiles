@@ -1,3 +1,3 @@
 function fish_greeting
-	motivate
+	fortune | colorize Cyan
 end
