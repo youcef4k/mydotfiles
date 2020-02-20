@@ -27,7 +27,7 @@ set $transparent #00000000
 set $lucent    #00000088
 
 # This is the labels which describe each i3 workspace.
-set $ws1   " 1 Email <span foreground='#268bd2'></span> "
+set $ws1   " 1 Windows <span foreground='#268bd2'></span> "
 set $ws2   " 2 Browser <span foreground='#2aa198'></span> "
 set $ws3   " 3 Terminal <span foreground='#859900'></span> "
 set $ws4   " 4 <span foreground='#b58900'></span> "
@@ -64,9 +64,12 @@ bindsym $mod+Mod1+Return exec nautilus ~/
 # start a web browser
 bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
 
-# start Email
-bindsym $mod+Ctrl+Return exec /usr/bin/thunderbird
+# start VirtualBox
+bindsym $mod+Shift+v exec VBoxManage startvm "ISV20345"
 
+# move focused workspace between monitors
+bindsym $mod+Shift+greater move workspace to output right
+bindsym $mod+Shift+less move workspace to output left
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -185,6 +188,12 @@ bindsym $mod+Escape exec i3lock-fancy-rapid 6 2
 # put the system to sleep
 bindsym $mod+Shift+s exec systemctl suspend
 
+# shutdown the system
+bindsym $mod+Shift+p exec systemctl poweroff
+
+# reboot the system
+bindsym $mod+Ctrl+p exec systemctl reboot
+
 # shortcuts for common system configuration tasks
 bindsym $mod+c exec gnome-control-center
 bindsym $mod+w exec gnome-control-center wifi
@@ -266,7 +275,13 @@ exec --no-startup-id /usr/bin/unclutter -b
 exec_always --no-startup-id feh --bg-scale --randomize /usr/share/backgrounds/ESP_*
 
 # Refresh wallpaper when monitor configuration changes.
-exec --no-startup-id /usr/bin/xeventbind resolution /usr/bin/wallpaper-refresh.sh
+exec --no-startup-id /usr/binr/xeventbind resolution /usr/bin/wallpaper-refresh.sh
+
+assign [class="VirtualBox Machine"] $ws1
+assign [class="Google-chrome"] $ws2
+
+exec VBoxManage startvm "ISV20345"
+exec google-chrome
 
 # exec --no-startup-id i3-msg 'workspace $ws2 ; exec google-chrome ; sleep 2'
 # exec --no-startup-id i3-msg 'workspace $ws1 ; exec thunderbird ; sleep 2'
