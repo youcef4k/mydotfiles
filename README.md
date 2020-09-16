@@ -13,3 +13,4 @@ A collection of my config files
 * ~/.config/kitty/kitty.conf
 * /etc/xdg/compton.conf
 * /usr/share/games/fortunes/sfw-programming (+sudo strfile <file>)
+* ~/.tmux.conf
